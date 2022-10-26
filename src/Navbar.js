@@ -11,12 +11,12 @@ import {ReactComponent as Credits} from './img/link.svg';
 class NavbarElement extends React.Component{
     render(){
         return <div key={'navItem#'+this.props.keyVal} className='d-flex align-items-center flex-nowrap'>
-                    <div key={'navItem#'+this.props.keyVal+'.1'} className="p-2">
+                    <div key={'navImg#'+this.props.keyVal} className="p-2">
                         <a href={this.props.href}>
                             {this.props.children}
                         </a>
                     </div>
-                    <div key={'navItem#'+this.props.keyVal+'.2'} className="p-2">
+                    <div key={'navText#'+this.props.keyVal} className="p-2">
                         <a href={this.props.href}>
                             <span className='nav-text'>{this.props.text}</span>
                         </a>
@@ -43,9 +43,9 @@ class Navbar extends React.Component{
         navElements.push(<NavbarElement keyVal={i.toString()} href={this.state.href[i]} text={this.state.text[i]}>{this.state.icons[i]}</NavbarElement>);
     }
     return <div className={'nav-container' + (this.state.active ? ' active': '') } >
-                <a href='#' className={'toggleBox' + (this.state.active ? ' active': '') } onClick = {this.handleClick}>
+                <button className={'toggleBox' + (this.state.active ? ' active': '') } onClick = {this.handleClick}>
                     <span className='icon'></span>
-                </a>
+                </button>
                 <div className={'menu' + (this.state.active ? ' active': '')}>
                     {navElements}
                 </div>

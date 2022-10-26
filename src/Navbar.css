@@ -16,6 +16,8 @@
     height: 70px;
     width:70px;
     border-radius:50px;
+    background:transparent;
+    border:none;
 }
 .toggleBox.active .icon{
     width:0;
