@@ -1,0 +1,31 @@
+.asymmetric-container{
+    position: relative;
+}
+.asymmetric {
+	position: relative;
+}
+
+.blank-space1 {
+	position: absolute;
+	content: "";
+	transform-origin: top left;
+	transform: skewY(-3deg);
+	z-index: -10;
+    top:0;
+    left:0;
+    height:150px;
+    width:100%;
+    display: block;
+}
+
+.blank-space2 {
+	position: absolute;
+	content: "";
+    height:100px;
+    width:100%;
+    top:75%;
+    left:0;
+	transform-origin: top left;
+	transform: skewY(3deg);
+	z-index: -10;
+}

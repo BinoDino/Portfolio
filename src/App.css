@@ -1,1 +1,6 @@
-
+.container-fluid{
+    max-width: 1400px;
+}
+.mt-x{
+    margin-top:100px
+}

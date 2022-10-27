@@ -10,15 +10,15 @@ import {ReactComponent as Credits} from './img/link.svg';
 
 class NavbarElement extends React.Component{
     render(){
-        return <div key={'navItem#'+this.props.keyVal} className='d-flex align-items-center flex-nowrap'>
+        return <div key={'navItem#'+this.props.keyVal} className='navItem d-flex align-items-center flex-nowrap'>
                     <div key={'navImg#'+this.props.keyVal} className="p-2">
                         <a href={this.props.href}>
                             {this.props.children}
                         </a>
                     </div>
-                    <div key={'navText#'+this.props.keyVal} className="p-2">
+                    <div key={'navText#'+this.props.keyVal} className="nav-text p-2">
                         <a href={this.props.href}>
-                            <span className='nav-text'>{this.props.text}</span>
+                            <span>{this.props.text}</span>
                         </a>
                     </div>
                 </div>
