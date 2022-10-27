@@ -8,3 +8,12 @@
     font-weight: bold;
     background-color: #FFAC61;
 }
+
+.dropdown-img{
+    transform: rotate(180deg);
+    width:20px;
+    height:20px;
+}
+.dropdown-img.active{
+    transform: rotate(0deg);
+}

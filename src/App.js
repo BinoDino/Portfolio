@@ -9,13 +9,13 @@ import './App.css';
 function App() {
   return (
     <HashRouter>
-      <div className = 'container-fluid mb-5'>
-        <div className="container">
+      <div className = 'container-fluid mb-x'>
+        <div key='nav_container' className="container">
           <div className= 'row justify-content-center'>
             <Navbar></Navbar>
           </div>
         </div>
-        <div className='container mt-x'>
+        <div key='main_container' className='container mt-x'>
           {
           <Routes>
             <Route path={`/*`} element={<Home/>} />

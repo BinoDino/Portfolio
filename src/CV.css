@@ -1,3 +1,9 @@
+.hidden-content{
+    display: none;
+}
+.hidden-content.active {
+    display: block;
+}
 .timeline-container{
     position:relative;
 }

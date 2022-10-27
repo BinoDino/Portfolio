@@ -1,18 +1,32 @@
 import React from "react";
 import AsymmetricBox from './AsymmetricBox.js';
-import NavButton from './Button.js';
+import { NavButton, DropdownButton } from './Button.js';
 import './CV.css';
 
 class TimelineElement extends React.Component{
+    state={
+        active: false
+    }
+    handleClick = () => {
+        this.setState({
+            active: !this.state.active
+      })
+     }
     render(){
         return <div key={'timelineItem#'+this.props.keyVal} className={"inner-container " + this.props.side}>
                     <div className="content">
                         <h3 className="text-center">{this.props.date}</h3>
                         <p className="text-center">{this.props.description}</p>
                         <hr className="mx-auto w-75"/>
-                        <p className="text-center"> {this.props.school} </p>
-                        <p className="text-center">{this.props.degree_description} <strong>{this.props.degree}</strong></p>
-                        <p className="text-center">{this.props.grades}</p>
+                        <div className='d-flex justify-content-center'>
+                            <DropdownButton active={this.state.active} text="Details" handleClick={this.handleClick}/>
+                        </div>
+                        <div className={"hidden-content" +(this.state.active ? ' active':'')}>
+                            <hr className="mx-auto w-75"/>
+                            <p className="text-center"> {this.props.school} </p>
+                            <p className="text-center">{this.props.degree_description} <strong>{this.props.degree}</strong></p>
+                            <p className="text-center">{this.props.grades}</p>
+                        </div>
                     </div>
                 </div>
     }

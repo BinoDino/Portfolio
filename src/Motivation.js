@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
 import AsymmetricBox from './AsymmetricBox.js';
-import NavButton from './Button.js';
+import {NavButton} from './Button.js';
 
 class Motivation extends React.Component{
     render(){

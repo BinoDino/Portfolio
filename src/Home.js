@@ -1,7 +1,7 @@
 import React from "react";
 import AsymmetricBox from './AsymmetricBox.js';
 import Img from './Img.js';
-import NavButton from './Button.js';
+import {NavButton} from './Button.js';
 import portrait from './img/sb.jpg';
 import arrow from './img/up-arrow.png';
 
