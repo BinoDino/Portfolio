@@ -8,7 +8,7 @@
     transition: 0.4s ease;
   }
 .nav-container.active{
-    height:380px;
+    height:420px;
 }
 .toggleBox{
     position: relative;
@@ -72,7 +72,7 @@
     animation-duration: 2s;
 }
 
-a{
+.nav-link{
     text-transform: uppercase;
     text-decoration:none;
     color: #000;
@@ -81,13 +81,13 @@ svg{
     width:40px;
     height:40px;
 }
-.navItem:hover svg path{
+.navItem:hover svg path, .nav-link.active svg path {
     fill:blue !important;
 }
 .navItem:hover .nav-text{
     transform: translate(10px, 0px);
 }
-.navItem:hover .nav-text span{
+.navItem:hover .nav-text span,.nav-link.active {
     color:blue;
     font-weight: bold;
 }

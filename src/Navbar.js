@@ -1,6 +1,8 @@
 import React from 'react';
 import './Navbar.css';
-import {ReactComponent as Avatar} from './img/user.svg';
+import { NavLink } from 'react-router-dom';
+import {ReactComponent as Home} from './img/home.svg';
+import {ReactComponent as Motivation} from './img/motivation.svg';
 import {ReactComponent as CV} from './img/cv.svg';
 import {ReactComponent as Code} from './img/code.svg';
 import {ReactComponent as Contact} from './img/contact.svg';
@@ -12,14 +14,14 @@ class NavbarElement extends React.Component{
     render(){
         return <div key={'navItem#'+this.props.keyVal} className='navItem d-flex align-items-center flex-nowrap'>
                     <div key={'navImg#'+this.props.keyVal} className="p-2">
-                        <a href={this.props.href}>
+                        <NavLink to={this.props.href} end className={({ isActive }) => ["nav-link", isActive ? "active" : null,].filter(Boolean).join(" ")}>
                             {this.props.children}
-                        </a>
+                        </NavLink>
                     </div>
                     <div key={'navText#'+this.props.keyVal} className="nav-text p-2">
-                        <a href={this.props.href}>
+                        <NavLink to={this.props.href} end className={({ isActive }) => ["nav-link", isActive ? "active" : null,].filter(Boolean).join(" ")}>
                             <span>{this.props.text}</span>
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
     }
@@ -28,9 +30,9 @@ class NavbarElement extends React.Component{
 class Navbar extends React.Component{
  state={
     active: false,
-    icons:[<Avatar/>,<CV/>,<Code/>,<Contact/>,<Credits/>],
-    text:['Profil', 'Lebenslauf', 'Projekte', 'Kontakt', 'Credits'],
-    href:['#','#','#','#','#'] 
+    icons:[<Home/>,<Motivation/>,<CV/>,<Code/>,<Contact/>,<Credits/>],
+    text:['Home','Motivation', 'Lebenslauf', 'Projekte', 'Kontakt', 'Credits'],
+    href:['','motivation','cv','projects','contact','credits'] 
  }
  handleClick = () => {
     this.setState({

@@ -1,0 +1,10 @@
+.btn-red{
+    color:#fff;
+    background-color: #FF4F44;
+}
+
+.btn-red:hover{
+    color:#fff;
+    font-weight: bold;
+    background-color: #FFAC61;
+}
