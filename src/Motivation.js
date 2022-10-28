@@ -18,7 +18,7 @@ class Motivation extends React.Component{
                     </div>
                     <div className= 'row'>
                         <div className="d-flex justify-content-end">
-                            <NavButton href={'/cv'}>Zum Lebenslauf</NavButton>
+                            <NavButton href={'/education'}>Zur Education</NavButton>
                         </div>
                     </div>
                 </AsymmetricBox>

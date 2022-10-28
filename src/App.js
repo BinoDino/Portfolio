@@ -3,7 +3,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar.js';
 import Home from './Home.js';
 import Motivation from './Motivation.js';
-import CV from './CV.js';
+import Education from './Education.js';
 import './App.css';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           <Routes>
             <Route path={`/*`} element={<Home/>} />
             <Route path={`/motivation`} element={<Motivation/>} />
-            <Route path={`/cv`} element={<CV/>} />
+            <Route path={`/education`} element={<Education/>} />
           </Routes>
           }
         </div>

@@ -1,8 +1,14 @@
 .hidden-content{
     display: none;
 }
+@keyframes grow {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
 .hidden-content.active {
     display: block;
+    animation-name:grow;
+    animation-duration: 2s;
 }
 .timeline-container{
     position:relative;
