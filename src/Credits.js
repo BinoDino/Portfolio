@@ -13,7 +13,7 @@ class CreditContainer extends React.Component{
       })
      }
     render(){
-        return <div className="row mt-3">
+        return <div className="row mx-0 mt-3">
                     <div className="col">
                         <div key='dropdown' className='d-flex justify-content-center'>
                             <DropdownButton active={this.state.active} text={this.props.title} handleClick={this.handleClick}/>
@@ -44,22 +44,22 @@ class Credits extends React.Component{
                 <AsymmetricBox>
                 <div key='creditRow-Navbar' className= 'row mt-3'>
                     <h3 className="text-center">Navigation</h3>
-                    <p className="text-center">Die Navigationsleiste ist angelehnt an <a target='_blank'  href='https://www.youtube.com/watch?v=1uEAt51fEos ' rel="noreferrer">dieses Tutorial</a>.</p>
+                    <p className="text-center">Die Navigationsleiste ist angelehnt an <a target='_blank'  href='https://www.youtube.com/watch?v=1uEAt51fEos ' rel="noreferrer">dieses YouTube-Tutorial</a>.</p>
                 </div>
                 <div key='creditRow-Asymm' className= 'row mt-3'>
                     <h3 className="text-center">Asymmetrische Box</h3>
-                    <p className="text-center">Die asymmetrische Box ist angelehnt an <a target='_blank'  href='https://medium.com/@RoseLGauthier/how-to-use-css3-pseudo-elements-to-create-asymmetrical-designs-f610f2a481ed' rel="noreferrer">dieses Tutorial</a>.</p>
+                    <p className="text-center">Die asymmetrische Box ist angelehnt an <a target='_blank'  href='https://medium.com/@RoseLGauthier/how-to-use-css3-pseudo-elements-to-create-asymmetrical-designs-f610f2a481ed' rel="noreferrer">diesen Beitrag von Medium.com</a>.</p>
                 </div>
                 <div key='creditRow-Timeline' className= 'row mt-3'>
                     <h3 className="text-center">Timeline</h3>
-                    <p className="text-center">Die Timeline ist angelehnt an <a target='_blank'  href='https://www.w3schools.com/howto/howto_css_timeline.asp' rel="noreferrer">dieses Tutorial</a>.</p>
+                    <p className="text-center">Die Timeline ist angelehnt an <a target='_blank'  href='https://www.w3schools.com/howto/howto_css_timeline.asp' rel="noreferrer">dieses W3schools-Tutorial</a>.</p>
                 </div>
                 <div key='creditRow-Icon' className= 'row'>
                     <h3 className="text-center">Icons</h3>
                     <p className="text-center">Die Icons, die ich auf dieser Seite verwende, stammen von <a target='_blank'  href='https://www.flaticon.com/' rel="noreferrer">Flaticon.com</a>. Details:</p>
                     {creditElements}
                 </div>
-                <div key='buttonRow' className= 'row mt-3'>
+                <div key='buttonRow' className= 'row mt-5 mt-lg-3 mb-3 mb-lg-0'>
                     <div className="d-flex justify-content-end">
                         <NavButton href={'/'}>Zurück zum Anfang</NavButton>
                     </div>

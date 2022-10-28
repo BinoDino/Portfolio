@@ -6,7 +6,7 @@ class Contact extends React.Component{
     render(){
         return <div className= 'row'>
                 <AsymmetricBox>
-                    <div className= 'row'>
+                    <div className= 'row mt-3 mt-lg-0'>
                         <div className="col">
                             <h3 className="text-center">Kontaktinformationen</h3>
                             <p key='email' className="text-center"> Bei Fragen oder Anregungen kannst du mir gerne eine Nachricht via E-Mail zukommen lassen: <a href='mailto:sabine-britner@t-online.de'>sabine-britner@t-online.de</a>.</p>

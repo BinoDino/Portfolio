@@ -50,8 +50,8 @@ class Education extends React.Component{
         }
         return <div className= 'row'>
                     <AsymmetricBox>
-                        <div className= 'row'>
-                            <div className="col">
+                        <div className= 'row mt-3 mt-lg-0'>
+                            <div className="col px-0">
                                 <h3 className="text-center">Education</h3>
                                 <div className="timeline-container">
                                     <div className="timeline">
@@ -60,7 +60,7 @@ class Education extends React.Component{
                                 </div>
                             </div>
                         </div>
-                        <div className= 'row mt-3'>
+                        <div className= 'row mt-3 mb-3 mb-lg-0'>
                             <div className="d-flex justify-content-end">
                                 <NavButton href={'/projects'}>Zu den Projekten</NavButton>
                             </div>

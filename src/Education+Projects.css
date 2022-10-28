@@ -13,13 +13,13 @@
 .timeline-container{
     position:relative;
 }
-/* The actual timeline (the vertical ruler) */
+/*vertical ruler*/
 .timeline {
     position: relative;
     margin: 0 auto;
   }
   
-/* The actual timeline (the vertical ruler) */
+/*vertical ruler*/
 .timeline::after {
     content: '';
     position: absolute;
@@ -31,7 +31,7 @@
     margin-left: -3px;
 }
   
-/* Container around content */
+/* container around content */
 .inner-container {
     padding: 10px 40px;
     position: relative;
@@ -39,7 +39,7 @@
     width: 50%;
 }
   
-/* The circles on the timeline */
+/* circles on the timeline */
 .inner-container::after {
     content: '';
     position: absolute;
@@ -52,17 +52,17 @@
     z-index: 1;
 }
   
-/* Place the container to the left */
+/* place container left */
 .left {
     left: 0;
 }
   
-/* Place the container to the right */
+/* place container right */
 .right {
     left: 50%;
 }
   
-/* Add arrows to the left container (pointing right) */
+/* arrows left container (pointing right) */
 .left::before {
     content: " ";
     height: 0;
@@ -76,7 +76,7 @@
     border-color: transparent transparent transparent #FFAC61;
 }
   
-/* Add arrows to the right container (pointing left) */
+/* arrows right container (pointing left) */
 .right::before {
     content: " ";
     height: 0;
@@ -92,7 +92,7 @@
   
 /* Fix the circle for containers on the right side */
 .right::after {
-    left: -16px;
+    left: -12px;
 }
   
 /* The actual content */

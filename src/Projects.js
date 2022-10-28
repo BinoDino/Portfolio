@@ -38,7 +38,7 @@ class TimelineElementProjects extends React.Component{
                                 )}
                             </ul>
                             <h5 className='text-center'>Technologien</h5>
-                            <div className='d-flex justify-content-center'>
+                            <div className='d-flex flex-wrap justify-content-center'>
                                 {this.props.technologies.map((value,index)=> 
                                     <div key={index} className='p-2'>
                                         <img src={value} className='technologyIcon' alt='Technology Icon'/>
@@ -57,7 +57,7 @@ class Projects extends React.Component{
         date:['Seit 08/2022','Seit 08/2022', 'Seit 04/2022', '09/2021 - 03/2022', '02/2021 - 09/2021'],
         title:['KTK Website','Solo Game','Data4Indiko','Cyberwareness','Geheimnis einer Textnachricht'],
         description:['KTK Experts: Unternehmenswebseite','Aroolla: Konstruktion eines wiederverwendbaren Templates aus einem Serious Game','Pädagogische Hochschule Karlsruhe: Webseite zur Datenerfassung für Mustererkennung','Kooperation Pädagogische Hochschule Karlsruhe und Northeastern Illinois University: Projekt zur Aufklärung über Social Engineering','Pädagogische Hochschule Karlsruhe: Lernspiel zur Vermittlung der Funktionsweise des Internets'],
-        tasks:[['Design und Implementierung Frontend'],['Analyse von Spiel-Prozessen','Modellierung der Beziehungen (ER + UML)','Implementierung eines Template-Prototypen'],['Datenbankmodellierung (ER) und - implementierung','Datenbankabfragen','Entwicklung und Implementierung Frontend-Struktur','Benutzerauthentifizierung mit JSON Web Token','Externer Datenzugriff via API','Erstellen von Cron Jobs zur zeitabhängigen Ausführung von PHP-Skripten'],['Design und Implementierung von Informationsabschnitt und Test zu Social Engineering','Responsive Design','Datenbankmodellierung und -implementierung','Analytics Sheet zur Datenauswertung','Multi Language Support (Deutsch/Englisch)'],['Implementierung Frontend','Spiel-Logik (Freischalten von Leveln)','Redundanzminimierung und Strukturierung in wiederverwendbare Komponenten','Responsive Design']],
+        tasks:[['Design und Implementierung Frontend'],['Analyse von Spiel-Prozessen','Modellierung der Beziehungen','Implementierung eines Template-Prototypen'],['Modellierung und Implementierung der Datenbank','Datenbankabfragen','Entwicklung und Implementierung Frontend-Struktur','Authentifizierung von Benutzern mit JSON Web Token','Externer Datenzugriff via API','Erstellen von Cron Jobs zur zeitabhängigen Ausführung von PHP-Skripten'],['Design und Implementierung von Info-Seite und Test zu Social Engineering','Responsive Design','Modellierung und Implementierung der Datenbank','Analytics Sheet zur Datenauswertung','Multi Language Support (Deutsch/Englisch)'],['Implementierung Frontend','Spiel-Logik (Freischalten von Leveln)','Minimierung von Redundanzen und Strukturierung in wiederverwendbare Komponenten','Responsive Design']],
         technologies:[[html5,css3,reactIcon],[mysql,python],[html5,css3,javascriptIcon,php,mysql],[html5,css3,javascriptIcon,php,mysql,python],[html5,css3,javascriptIcon]]
     }
     render(){
@@ -68,8 +68,8 @@ class Projects extends React.Component{
         }
         return <div className= 'row'>
                     <AsymmetricBox>
-                        <div className= 'row'>
-                            <div className="col">
+                        <div className= 'row mt-3 mt-lg-0'>
+                            <div className="col px-0">
                                 <h3 className="text-center">Projekte</h3>
                                 <div className="timeline-container">
                                     <div className="timeline">
@@ -78,7 +78,7 @@ class Projects extends React.Component{
                                 </div>
                             </div>
                         </div>
-                        <div className= 'row mt-3'>
+                        <div className= 'row mt-3 mb-3 mb-lg-0'>
                             <div className="d-flex justify-content-end">
                                 <NavButton href={'/contact'}>Zum Kontakt</NavButton>
                             </div>
