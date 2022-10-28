@@ -8,8 +8,6 @@ import {ReactComponent as Code} from './img/code.svg';
 import {ReactComponent as Contact} from './img/contact.svg';
 import {ReactComponent as Credits} from './img/link.svg';
 
-// vertical navbar. inspired by https://www.youtube.com/watch?v=1uEAt51fEos 
-
 class NavbarElement extends React.Component{
     render(){
         return <div className='navItem d-flex align-items-center flex-nowrap'>

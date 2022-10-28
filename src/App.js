@@ -5,6 +5,8 @@ import Home from './Home.js';
 import Motivation from './Motivation.js';
 import Education from './Education.js';
 import Projects from './Projects.js';
+import Contact from './Contact.js';
+import Credits from './Credits.js';
 import './App.css';
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
             <Route path={`/motivation`} element={<Motivation/>} />
             <Route path={`/education`} element={<Education/>} />
             <Route path={`/projects`} element={<Projects/>} />
+            <Route path={`/contact`} element={<Contact/>} />
+            <Route path={`/credits`} element={<Credits/>} />
           </Routes>
           }
         </div>

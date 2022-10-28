@@ -18,7 +18,7 @@ class Home extends React.Component{
                     <Img imgSrc={portrait} alt="portrait" text="Das bin ich" icon={arrow} altIcon='arrow'></Img>
                     <div className= 'row'>
                         <div className="d-flex justify-content-end">
-                            <NavButton href={'motivation'}>Hier geht es zum Rundgang</NavButton>
+                            <NavButton href={'/motivation'}>Hier geht es zum Rundgang</NavButton>
                         </div>
                     </div>
                 </AsymmetricBox>
