@@ -5,7 +5,7 @@ import './Button.css';
 
 class DropdownButton extends React.Component{
     render(){
-        return <button key={this.props.parentKeyVal} className='bg-transparent border-0' onClick={this.props.handleClick}>
+        return <button className='bg-transparent border-0' onClick={this.props.handleClick}>
                     {this.props.text}
                     <img className={'dropdown-img' + (this.props.active ? ' active' : '')} src={arrow} alt='Arrow displaying dropdown'/>
                </button>

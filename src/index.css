@@ -53,6 +53,6 @@ body {
   width:100%;
   min-height:100vh;
 }
-h3{
+h3, h5{
   font-family: 'Patrick Hand SC', sans-serif;
 }

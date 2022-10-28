@@ -4,6 +4,7 @@ import Navbar from './Navbar.js';
 import Home from './Home.js';
 import Motivation from './Motivation.js';
 import Education from './Education.js';
+import Projects from './Projects.js';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path={`/*`} element={<Home/>} />
             <Route path={`/motivation`} element={<Motivation/>} />
             <Route path={`/education`} element={<Education/>} />
+            <Route path={`/projects`} element={<Projects/>} />
           </Routes>
           }
         </div>

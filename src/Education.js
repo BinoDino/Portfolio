@@ -1,9 +1,9 @@
 import React from "react";
 import AsymmetricBox from './AsymmetricBox.js';
 import { NavButton, DropdownButton } from './Button.js';
-import './Education.css';
+import './Education+Projects.css';
 
-class TimelineElement extends React.Component{
+class TimelineElementEducation extends React.Component{
     state={
         active: false
     }
@@ -19,7 +19,7 @@ class TimelineElement extends React.Component{
                         <p className="text-center">{this.props.description}</p>
                         <hr className="mx-auto w-75"/>
                         <div key='dropdownBtnContainer' className='d-flex justify-content-center'>
-                            <DropdownButton parentKeyVal={'timelineItem#'+this.props.keyVal+'-4-1'} active={this.state.active} text="Details" handleClick={this.handleClick}/>
+                            <DropdownButton active={this.state.active} text="Details" handleClick={this.handleClick}/>
                         </div>
                         <div key='hiddenContent' className={"hidden-content" +(this.state.active ? ' active':'')}>
                             <hr className="mx-auto w-75"/>
@@ -46,7 +46,7 @@ class Education extends React.Component{
         var timelineElements =[];
         for(let i=0; i<this.state.date.length; i++){
             var sideOfContent = i%2 === 0 ? 'left':'right';
-            timelineElements.push(<TimelineElement key={'timelineItem'+i.toString()} side={sideOfContent} date={this.state.date[i]} description={this.state.description[i]} school={this.state.school[i]} degree={this.state.degree[i]} degree_description={this.state.degree_description[i]} grades={this.state.grades[i]}/>);
+            timelineElements.push(<TimelineElementEducation key={'timelineItem'+i.toString()} side={sideOfContent} date={this.state.date[i]} description={this.state.description[i]} school={this.state.school[i]} degree={this.state.degree[i]} degree_description={this.state.degree_description[i]} grades={this.state.grades[i]}/>);
         }
         return <div className= 'row'>
                     <AsymmetricBox>
