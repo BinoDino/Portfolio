@@ -1,6 +1,6 @@
 import React from "react";
 import AsymmetricBox from './AsymmetricBox.js';
-import {NavButton,DropdownButton} from './Button.js';
+import {NavButton, DropdownButton} from './Button.js';
 import './Credits.css'
 
 class CreditContainer extends React.Component{
@@ -15,7 +15,7 @@ class CreditContainer extends React.Component{
     render(){
         return <div className="row mt-3">
                     <div className="col">
-                        <div key='dropdown' className='row justify-content-center'>
+                        <div key='dropdown' className='d-flex justify-content-center'>
                             <DropdownButton active={this.state.active} text={this.props.title} handleClick={this.handleClick}/>
                         </div>
                         <div key='hidden-credits' className={'hidden-credits' + (this.state.active ? ' active' : '' )}>

@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import arrow from './img/up-arrow.png';
+import {ReactComponent as Arrow} from './img/up-arrow.svg';
 import './Button.css';
 
 class DropdownButton extends React.Component{
     render(){
-        return <button className='bg-transparent border-0' onClick={this.props.handleClick}>
-                    {this.props.text}
-                    <img className={'dropdown-img' + (this.props.active ? ' active' : '')} src={arrow} alt='Arrow displaying dropdown'/>
+        return <button className={'bg-transparent border-0 p-2 dropdown'+ (this.props.active ? ' active' : '')} onClick={this.props.handleClick}>
+                    <span>{this.props.text}</span>
+                    <span className={'dropdown-img'}><Arrow/></span>
                </button>
     }
 }
