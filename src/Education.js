@@ -1,7 +1,8 @@
 import React from "react";
 import AsymmetricBox from './AsymmetricBox.js';
-import { NavButton, DropdownButton } from './Button.js';
-import './Education+Projects.css';
+import { NavButton} from './Button.js';
+import{TimelineItem, Timeline} from './Timeline.js';
+import './Timeline.css';
 
 class TimelineElementEducation extends React.Component{
     state={
@@ -13,22 +14,15 @@ class TimelineElementEducation extends React.Component{
       })
      }
     render(){
-        return <div className={"inner-container " + this.props.side}>
-                    <div className="content">
-                        <h3 className="text-center">{this.props.date}</h3>
-                        <p className="text-center">{this.props.description}</p>
+        return <TimelineItem side={this.props.side} active={this.state.active} date={this.props.date} description={this.props.description} handleClick={this.handleClick}>
+                    <div key='hiddenContent' className={"hidden-content" +(this.state.active ? ' active':'')}>
                         <hr className="mx-auto w-75"/>
-                        <div key='dropdownBtnContainer' className='d-flex justify-content-center'>
-                            <DropdownButton active={this.state.active} text="Details" handleClick={this.handleClick}/>
-                        </div>
-                        <div key='hiddenContent' className={"hidden-content" +(this.state.active ? ' active':'')}>
-                            <hr className="mx-auto w-75"/>
-                            <p key='hiddenContent-p1' className="text-center"> {this.props.school} </p>
-                            <p key='hiddenContent-p2' className="text-center">{this.props.degree_description} <strong>{this.props.degree}</strong></p>
-                            <p key='hiddenContent-p3'className="text-center">{this.props.grades}</p>
-                        </div>
+                        <p key='hiddenContent-p1' className="text-center"> {this.props.school} </p>
+                        <p key='hiddenContent-p2' className="text-center">{this.props.degree_description} <strong>{this.props.degree}</strong></p>
+                        <p key='hiddenContent-p3'className="text-center">{this.props.grades}</p>
                     </div>
-                </div>
+                </TimelineItem>
+                    
     }
 }
 
@@ -53,11 +47,9 @@ class Education extends React.Component{
                         <div className= 'row mt-3 mt-lg-0'>
                             <div className="col px-0">
                                 <h3 className="text-center">Education</h3>
-                                <div className="timeline-container">
-                                    <div className="timeline">
+                                <Timeline>
                                         {timelineElements}
-                                    </div>
-                                </div>
+                                </Timeline>
                             </div>
                         </div>
                         <div className= 'row mt-3 mb-3 mb-lg-0'>

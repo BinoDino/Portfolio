@@ -1,7 +1,8 @@
 import React from "react";
 import AsymmetricBox from './AsymmetricBox.js';
-import { NavButton, DropdownButton } from './Button.js';
-import './Education+Projects.css';
+import { NavButton} from './Button.js';
+import{TimelineItem, Timeline} from './Timeline.js';
+import './Timeline.css';
 import  css3 from './img/css.png';
 import html5 from './img/html-5.png';
 import javascriptIcon from './img/js.png';
@@ -20,34 +21,23 @@ class TimelineElementProjects extends React.Component{
       })
      }
     render(){
-        return <div className={"inner-container " + this.props.side}>
-                    <div className="content">
-                        <h3 className="text-center">{this.props.date}</h3>
-                        <p key='title' className="text-center"><strong>{this.props.title}</strong></p>
-                        <p key='description' className="text-center">{this.props.description}</p>
-                        <hr className="mx-auto w-75"/>
-                        <div key='dropdownBtnContainer' className='d-flex justify-content-center'>
-                            <DropdownButton active={this.state.active} text="Details" handleClick={this.handleClick}/>
-                        </div>
-                        <div key='hiddenContent' className={"hidden-content" +(this.state.active ? ' active':'')}>
-                            <hr className="mx-auto w-75"/>
-                            <h5 className='text-center'>Aufgaben</h5>
-                            <ul>
-                                {this.props.tasks.map((value,index)=> 
-                                    <li key={index}> {value} </li>
-                                )}
-                            </ul>
-                            <h5 className='text-center'>Technologien</h5>
-                            <div className='d-flex flex-wrap justify-content-center'>
-                                {this.props.technologies.map((value,index)=> 
-                                    <div key={index} className='p-2'>
-                                        <img src={value} className='technologyIcon' alt='Technology Icon'/>
-                                    </div> 
-                                )}
-                            </div>  
-                        </div>
-                    </div>
-                </div>
+        return <TimelineItem side={this.props.side} active={this.state.active} date={this.props.date} description={this.props.description} handleClick={this.handleClick}>
+                    <hr className="mx-auto w-75"/>
+                    <h5 className='text-center'>Aufgaben</h5>
+                    <ul>
+                        {this.props.tasks.map((value,index)=> 
+                            <li key={index}> {value} </li>
+                        )}
+                    </ul>
+                    <h5 className='text-center'>Technologien</h5>
+                    <div className='d-flex flex-wrap justify-content-center'>
+                        {this.props.technologies.map((value,index)=> 
+                            <div key={index} className='p-2'>
+                                <img src={value} className='technologyIcon' alt='Technology Icon'/>
+                            </div> 
+                        )}
+                    </div>  
+                </TimelineItem>
     }
 }
 
@@ -71,11 +61,9 @@ class Projects extends React.Component{
                         <div className= 'row mt-3 mt-lg-0'>
                             <div className="col px-0">
                                 <h3 className="text-center">Projekte</h3>
-                                <div className="timeline-container">
-                                    <div className="timeline">
-                                        {timelineElements}
-                                    </div>
-                                </div>
+                                <Timeline>
+                                    {timelineElements}
+                                </Timeline>
                             </div>
                         </div>
                         <div className= 'row mt-3 mb-3 mb-lg-0'>
